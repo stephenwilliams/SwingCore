@@ -17,17 +17,33 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.swingfx</groupId>
-  <artifactId>core</artifactId>
+  <groupId>com.alta189</groupId>
+  <artifactId>swingcore</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>core</name>
-  <url>http://swingfx.ch</url>
+  <name>SwingCore</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <distributionManagement>
+		<!-- Publish versioned releases here -->
+		<repository>
+			<id>nexus</id>
+			<name>nexus.alta189</name>
+			<url>http://nexus.alta189.com/content/repositories/releases</url>
+		</repository>
+
+		<!-- Publish snapshots here -->
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus.alta189</name>
+			<url>http://nexus.alta189.com/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
  <build>
   	<plugins>
   		<plugin>
@@ -41,6 +57,5 @@
   		</plugin>
   	</plugins>
   </build>
-  <dependencies>
-  </dependencies>
+  
 </project>
